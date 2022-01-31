@@ -231,11 +231,11 @@ p {
     min-width: 220px;
     max-width: 600px; } }
 
-@media screen and (min-width: 768px) and (max-width: 1119px) {
+@media screen and (min-width: 768px) and (max-width: 1439px) {
   .brand {
     width: 224px; } }
 
-@media screen and (min-width: 1120px) {
+@media screen and (min-width: 1440px) {
   .brand {
     width: 240px; } }
 
@@ -262,11 +262,11 @@ p {
     min-width: 220px;
     max-width: 600px; } }
 
-@media screen and (min-width: 768px) and (max-width: 1119px) {
+@media screen and (min-width: 768px) and (max-width: 1439px) {
   .equipment {
     width: 224px; } }
 
-@media screen and (min-width: 1120px) {
+@media screen and (min-width: 1440px) {
   .equipment {
     width: 240px; } }
 
@@ -310,7 +310,10 @@ p {
 
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   .wrapper {
-    padding: 24px; } }
+    padding: 24px; }
+  .list {
+    max-width: 720px;
+    margin: 0 auto; } }
 
 @media screen and (min-width: 1440px) {
   .wrapper {
@@ -667,11 +670,11 @@ p {
     justify-content: center;
     flex-wrap: wrap; }
 
-@media screen and (min-width: 768px) and (max-width: 1119px) {
+@media screen and (min-width: 768px) and (max-width: 1439px) {
   .repair__item:not(:last-child, :nth-child(3n)) {
     margin-right: 24px; } }
 
-@media screen and (min-width: 1120px) {
+@media screen and (min-width: 1440px) {
   .repair__item:not(:last-child, :nth-child(4n)) {
     margin-right: 32px; } }
 
