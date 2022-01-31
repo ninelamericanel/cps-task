@@ -6,7 +6,7 @@ const listEquipment = document.querySelectorAll('.repair__item.equipment')
 
 const toDisplay = () => {
 
-    if (screenWidth >= 768 && screenWidth <= 1119) {
+    if (screenWidth >= 768 && screenWidth <= 1439) {
 
       listBrand.forEach((el, index) => {
             if (index >= 6) {
@@ -21,7 +21,7 @@ const toDisplay = () => {
           el.classList.add('repair__item__hide')
         }
       })
-    } else if (screenWidth >= 1120) {
+    } else if (screenWidth >= 1440) {
       listBrand.forEach((el, index) => {
             if (index >= 8) {
                 el.classList.add('repair__item__hide')
