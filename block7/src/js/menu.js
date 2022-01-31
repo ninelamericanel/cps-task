@@ -10,7 +10,7 @@ const popupDesk = document.querySelectorAll('.popup.left-popup');
 btnOpenDesk.forEach((btn, i) => {
 
   btn.addEventListener('click', () => {
-    console.log(btn.parentElement);
+
     popupDesk[i].classList.add('popup__open');
     document.body.style.overflow = "hidden";
     content.classList.add('content-opacity');
@@ -27,12 +27,11 @@ btnCloseDesk.forEach((btn,i) => {
   })
 })
 
-console.log(btnOpenDesk)
 
 btnOpen.forEach((btn, i) => {
 
   btn.addEventListener('click', () => {
-    console.log(btn.parentElement);
+
     popup[i].classList.add('popup__open');
     document.body.style.overflow = "hidden";
     content.classList.add('content-opacity');
