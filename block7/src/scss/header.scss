@@ -1,11 +1,18 @@
 @import 'variable';
 
 .header {
-  width: 100%;
-  box-sizing: border-box;
-  padding: $padding320px;
+  padding: var(--main-padding);
+  display: flex;
+  align-items: center;
+
   border-bottom: 1px solid $borderTopBlock;
   background-color: $bgHeadlineColor;
+
+  padding-right: 145px; /*!*/
+
+  @media screen and (min-width: $minViewDesktop) {
+    display: none;
+  }
 
   .header__menu-btn {
     margin-right: 15px;
@@ -14,59 +21,8 @@
   .header__logo {
     display: flex;
     align-items: center;
-  }
 
-  .header__btns {
-    align-items: center;
-    margin-left: auto;
-
-    .header__another-btn {
-      height: 40px;
-    }
-
-    .header__btn:first-child {
-      margin-right: 15px;
-    }
-  }
-
-  .header__connection-btn {
-    margin-right: 15px;
-  }
-
-}
-
-.header-desktop {
-  background-color: $bgMainColor;
-
-  .header-desktop__another-btn {
-    display: flex;
-    margin-left: auto;
-    align-items: center;
-
-
-    .header-desktop__wrapper-btn {
-      display: flex;
-      padding: 0;
-      align-items: center;
-      .header-desktop__btn {
-        margin-left: 8px;
-      }
-    }
-
-    .header-desktop__wrapper-btn:first-child {
-      margin-right: 32px;
-    }
-  }
-}
-
-
-@media screen and (max-width: 767px) {
-
-  .header {
-    .header__connection-btn {
-      display: none;
-    }
-    .header__logo:after {
+    &:after {
       display: block;
       content: "";
       height: 32px;
@@ -74,20 +30,13 @@
       background-color: #eaeaea;
       margin-left: 15px;
       border-radius: 5px;
-    }
-  }
 
-}
-
-@media screen and (min-width: 768px) and (max-width: 1439px) {
-  .header {
-    padding: $padding768px;
-
-    .header__logo:after {
-      display: none;
+      @media screen and (min-width: $minViewTablet) {
+        display: none;
+      }
     }
 
-    .header__logo:before {
+    &:before {
       display: block;
       content: "";
       height: 32px;
@@ -95,9 +44,23 @@
       margin-right: 15px;
       background-color: #eaeaea;
       border-radius: 5px;
+
+      @media screen and (max-width: $minViewTablet) {
+        display: none;
+      }
     }
 
-    .header__connection-btn:after {
+  }
+
+  .header__connection-btn {
+    margin-left: auto;
+    margin-right: 15px;
+
+    @media screen and (max-width: $minViewTablet) {
+      display: none;
+    }
+
+    &:after {
       display: block;
       content: "";
       height: 32px;
@@ -106,21 +69,6 @@
       border-radius: 5px;
     }
   }
+
 }
 
-
-@media screen and (max-width: 1439px) {
-  .header-desktop {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .header {
-    display: none;
-  }
-
-  .header-desktop {
-    padding: $padding1440px;
-  }
-}

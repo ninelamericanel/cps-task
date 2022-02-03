@@ -12,7 +12,10 @@ $borderBottomTable: #EAEAEA;
 
 $bgLongBtn: #FF3E79;
 
-$padding320px: 24px 16px;
-$padding768px: 24px;
-$padding1440px: 30px;
+$paddingMobile: 16px;
+$paddingTablet: 24px;
+$paddingDesktop: 30px;
+
+$minViewTablet: 768px;
+$minViewDesktop: 1366px;
 

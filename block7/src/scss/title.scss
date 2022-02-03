@@ -2,6 +2,12 @@
 
 .title {
   position: relative;
+  padding-left: var(--main-padding); /*!*/
+  margin-top: 24px;
+  @media screen and (min-width: $minViewDesktop) {
+    padding-top: var(--main-padding);
+    margin-top: 0;
+  }
 
   .title__text {
     font-weight: 700;
@@ -19,22 +25,6 @@
   border-radius: 2px;
   background-color: $borderLeftBlock;
   position: absolute;
-}
 
-@media screen and (max-width: 767px) {
- .title:before {
-   left: -16px;
- }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1439px) {
-  .title:before {
-    left: -24px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .title:before {
-    left: -30px;
-  }
+  left: -1px/*calc(-1 * var(--main-padding))*/;
 }
